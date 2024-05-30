@@ -1,0 +1,44 @@
+apply plugin: 'java'
+
+task runIntegration(type: JavaExec, dependsOn: test) {
+    main = 'org.example.Integration'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+check.dependsOn.add(runIntegration)
+
+task printX {
+    println(x)
+}
+
+task doMyTask(type: MyTask) {
+    s = x
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging.showStandardStreams = true
+}
+
+class MyTask extends DefaultTask {
+    @Input
+    String s
+
+    @TaskAction
+    void run() {
+        System.out.println("Hello from MyTask");
+        System.out.println("s = " + s);
+    }
+}
