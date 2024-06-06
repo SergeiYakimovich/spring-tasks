@@ -1,4 +1,4 @@
-package screensaver;
+package com.example.demo.borisov4.screensaver;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;

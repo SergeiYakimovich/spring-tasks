@@ -1,4 +1,4 @@
-package screensaver;
+package com.example.demo.borisov4.screensaver;
 
 import org.springframework.context.annotation.*;
 
@@ -6,7 +6,7 @@ import java.awt.*;
 import java.util.Random;
 
 @Configuration
-@ComponentScan(basePackages = "screensaver")
+@ComponentScan(basePackages = "com/example/demo/borisov4/screensaver")
 public class Config {
     @Bean
     @Scope("periodical")
@@ -16,7 +16,8 @@ public class Config {
         return new Color(random.nextInt(255), random.nextInt(255), random.nextInt(255));
     }
 
-    @Bean
+// TODO: remove this
+//    @Bean
     public ColorFrame colorFrame() {
         return new ColorFrame() {
             @Override

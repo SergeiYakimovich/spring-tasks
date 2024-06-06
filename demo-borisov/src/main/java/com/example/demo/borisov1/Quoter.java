@@ -1,4 +1,4 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 public interface Quoter {
     public void say();

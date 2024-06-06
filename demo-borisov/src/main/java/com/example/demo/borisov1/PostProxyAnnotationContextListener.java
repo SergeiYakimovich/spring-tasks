@@ -1,4 +1,4 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;

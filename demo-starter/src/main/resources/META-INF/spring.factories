@@ -1,2 +1,5 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
     my.starter.DemoStarterConfiguration
+
+org.springframework.context.ApplicationContextInitializer=\
+    borisov.spark.SparkApplicationContextInitalizer

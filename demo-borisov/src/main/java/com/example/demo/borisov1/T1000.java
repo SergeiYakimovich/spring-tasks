@@ -1,4 +1,4 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 @Profiling
 public class T1000 extends TerminatorQuoter implements Quoter {

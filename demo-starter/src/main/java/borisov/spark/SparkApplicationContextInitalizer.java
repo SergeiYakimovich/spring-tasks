@@ -1,4 +1,4 @@
-package com.example.demo.borisov4;
+package borisov.spark;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -7,9 +7,7 @@ public class SparkApplicationContextInitalizer implements ApplicationContextInit
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
-        String appName = applicationContext.getEnvironment().getProperty("spark.app-name");
-        System.out.println("appName = " + appName);
-
+        System.out.println("\nSparkApplicationContextInitalizer - initialize sparkService\n");
         applicationContext.getBeanFactory().registerSingleton("sparkService", new SparkService());
     }
 }

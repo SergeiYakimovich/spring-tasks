@@ -1,4 +1,4 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 import jakarta.annotation.PostConstruct;
 import lombok.Getter;

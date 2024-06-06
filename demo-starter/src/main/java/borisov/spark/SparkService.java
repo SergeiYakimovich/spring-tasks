@@ -1,4 +1,4 @@
-package com.example.demo.borisov4;
+package borisov.spark;
 
 public class SparkService {
     public void sayHello() {

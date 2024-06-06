@@ -36,6 +36,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-aop'
 
 	implementation(files("libs/tasks-1.0-SNAPSHOT.jar"))
+	implementation(files("libs/demo-starter-0.0.1-SNAPSHOT-plain.jar"))
 }
 
 tasks.named('test') {

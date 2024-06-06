@@ -1,4 +1,4 @@
-package screensaver1;
+package com.example.demo.borisov4.screensaver1;
 
 import org.springframework.context.annotation.*;
 
@@ -6,8 +6,8 @@ import java.awt.*;
 import java.util.Random;
 
 @Configuration
-@ComponentScan(basePackages = "screensaver1")
-public class Config {
+@ComponentScan(basePackages = "com/example/demo/borisov4/screensaver1")
+public class Config1 {
     @Bean
     @Scope("prototype")
     public Color color() {
@@ -17,9 +17,9 @@ public class Config {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Config1.class);
         while (true) {
-            ColorFrame frame = context.getBean(ColorFrame.class);
+            ColorFrame1 frame = context.getBean(ColorFrame1.class);
             frame.showOnRandomPlace();
             Thread.sleep(1000);
         }

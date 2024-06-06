@@ -1,8 +1,10 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Profiling {
+public @interface InjectRandomInt {
+    int min();
+    int max();
 }

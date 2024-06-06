@@ -1,4 +1,4 @@
-package com.example.demo.borisov;
+package com.example.demo.borisov1;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanDefinition;
