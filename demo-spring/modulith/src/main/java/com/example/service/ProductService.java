@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.dto.Product;
+import com.example.model.Product;
 
 public class ProductService {
     public Product createProduct(String name, String description, int price) {

@@ -27,24 +27,19 @@ repositories {
 extra["springCloudVersion"] = "2023.0.0"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-rest")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+	implementation("org.springframework.boot:spring-boot-starter")
+
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	testImplementation("junit:junit")
+	testImplementation("org.springframework.boot:spring-boot-starter-test")
 
 	// стартер
 	implementation(files("libs/demo-starter-0.0.1-SNAPSHOT-plain.jar"))
 }
 
-dependencyManagement {
-	imports {
-		mavenBom("org.springframework.cloud:spring-cloud-dependencies:2023.0.0")
-	}
-}
+
 
 tasks.withType<Test> {
 	useJUnitPlatform()

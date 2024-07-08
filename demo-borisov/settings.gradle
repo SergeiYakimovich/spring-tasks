@@ -6,3 +6,6 @@ pluginManagement {
 	}
 }
 rootProject.name = 'demo-borisov'
+include 'demo-boot'
+include 'demo-starter'
+

@@ -1,4 +1,4 @@
-package com.example.demospring.webflux;
+package com.mywebexample.webflux;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
