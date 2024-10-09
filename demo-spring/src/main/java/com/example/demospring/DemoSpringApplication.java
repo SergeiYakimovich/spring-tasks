@@ -1,6 +1,7 @@
 package com.example.demospring;
 
 import com.example.demospring.config.MyDemoSpringProperties;
+import com.example.demospring.example.MyTask;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -11,14 +12,13 @@ import java.io.IOException;
 
 @SpringBootApplication
 @EnableConfigurationProperties(MyDemoSpringProperties.class)
-
 public class DemoSpringApplication {
 	public static void main(String[] args) throws IOException {
-		SpringApplication.run(DemoSpringApplication.class, args);
+//		SpringApplication.run(DemoSpringApplication.class, args);
 
 //		System.out.println(context.getBean(MyDemoSpringProperties.class).getHost());
 
-//		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(DemoSpringApplication.class);
+		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(DemoSpringApplication.class);
 
 //		 !!!   стартер
 
@@ -33,12 +33,11 @@ public class DemoSpringApplication {
 
 //		!!!   prototype to singleton by lookup
 
-//		for (int i = 0; i < 2; i++) {
-//			MyTask myTask = context.getBean(MyTask.class);
-//			myTask.doTask();
-//			myTask.doTask();
-//		}
-
+		for (int i = 0; i < 2; i++) {
+			MyTask myTask = context.getBean(MyTask.class);
+			myTask.doTask();
+			myTask.doTask();
+		}
 
 
 

@@ -1,9 +1,13 @@
 package com.example.demo;
 
 import borisov.spark.SparkService;
+import com.example.demo.borisov3.events.MyEvent;
+import com.example.demo.borisov3.events.MyEventPublisher;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -12,7 +16,7 @@ public class DemoApplication {
 		// !!! Spring Потрошитель - 3-х фазный конструктор
 
 //		System.out.println("Стартуем");
-//		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(DemoApplication.class);
+		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(DemoApplication.class);
 //		SpringApplication.run(DemoApplication.class);
 //		System.out.println("\nКонтекст загружен\n");
 //		context.getBean(Quoter.class).say();
@@ -38,8 +42,7 @@ public class DemoApplication {
 
 
 		// !!! свой EventListener и Event
-
-//	context.publishEvent(new MyEvent("test"));
+//		context.getBean(MyEventPublisher.class).publishEvent("test");
 
 
 		// !!! регистрация бина через ApplicationContextInitalizer из стартера

@@ -17,6 +17,12 @@ configurations {
 	}
 }
 
+task ("myPrintDependencies") {
+	doLast {
+		dependencyManagement.managedVersions.forEach(::println)
+	}
+}
+
 repositories {
 	mavenCentral()
 	mavenLocal()
@@ -37,9 +43,9 @@ dependencies {
 
 	// стартер
 	implementation(files("libs/demo-starter-0.0.1-SNAPSHOT-plain.jar"))
+
+	implementation(("com.google.guava:guava:33.3.0-jre"))
 }
-
-
 
 tasks.withType<Test> {
 	useJUnitPlatform()

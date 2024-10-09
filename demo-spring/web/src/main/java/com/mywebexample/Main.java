@@ -16,7 +16,7 @@ import java.util.concurrent.ThreadLocalRandom;
 @SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-//		SpringApplication.run(Main.class, args);
+		SpringApplication.run(Main.class, args);
 
 //        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
 
@@ -31,8 +31,12 @@ public class Main {
 
 //        ThreadLocalRandom.current().nextInt();
 
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
-        context.getBean(CurrencyService.class).getCurrencyRate("USD");
+//        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+//        context.getBean(CurrencyService.class).getCurrencyRate("USD");
+
+        record CurrencyModel(String currency, double rate) {}
+
+        CurrencyModel currencyModel = new CurrencyModel("USD", 1.0);
 
     }
 }
